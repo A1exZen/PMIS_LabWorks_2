@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box; /* Чтобы паддинги не выходили за пределы */
+        }
+
+        .movie-card {
+            display: flex;
+            flex-direction: row;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 20px 0;
+            flex-wrap: wrap; /* Добавлено для мобильной адаптивности */
+            box-sizing: border-box; /* Чтобы паддинги не выходили за пределы */
+        }
+
+        .movie-image {
+            width: 250px;
+            height: 375px;
+            object-fit: cover;
+            border-radius: 12px 0 0 12px;
+        }
+
+        .movie-details {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box; /* Чтобы паддинги не выходили за пределы */
+        }
+
+        .movie-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .movie-year {
+            font-size: 1.2rem;
+            color: #95a5a6;
+            margin: 10px 0;
+        }
+
+        .movie-description {
+            font-size: 1rem;
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .movie-info {
+            font-size: 1rem;
+            color: #34495e;
+        }
+
+        .movie-info p {
+            margin: 5px 0;
+        }
+
+        .button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+            width: fit-content;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            /* Мобильная версия: делаем карточку вертикальной */
+            .movie-card {
+                flex-direction: column;
+            }
+
+            .movie-image {
+                width: 100%;
+                height: auto;
+                border-radius: 12px 12px 0 0; /* Улучшение границ */
+            }
+
+            .movie-details {
+                padding: 15px;
+            }
+
+            .movie-title {
+                font-size: 1.5rem; /* Уменьшаем размер шрифта для мобильных устройств */
+            }
+
+            .movie-year {
+                font-size: 1rem;
+            }
+
+            .movie-description {
+                font-size: 0.9rem; /* Уменьшаем размер шрифта для описания */
+            }
+
+            .movie-info {
+                font-size: 0.9rem;
+            }
+
+            .button {
+                width: 100%; /* Кнопка на всю ширину на мобильных устройствах */
+                padding: 15px; /* Увеличиваем область кнопки для удобства на мобильных */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="movie-card">
+        <img src="../a_gladiator.jpg" alt="Movie Poster" class="movie-image">
+        <div class="movie-details">
+            <h1 class="movie-title">Гладиатор</h1>
+            <p class="movie-year">2000</p>
+            <p class="movie-description">
+                Римский генерал Максимус становится гладиатором после того, как его семью убивает коррумпированный император. Он решает мстить за свою семью и бороться за свободу в жестоких боях на арене.</p>
+            <div class="movie-info">
+                <p><strong>Режиссер:</strong> Ридли Скотт</p>
+                <p><strong>Жанр:</strong> Исторический, Драма, Боевик</p>
+                <p><strong>Длительность:</strong> 155 мин</p>
+                <p><strong>Рейтинг:</strong> 8.5/10</p>
+            </div>
+            <button class="button" onclick="window.location.href='gladiator.html'">Смотреть Трейлер</button>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

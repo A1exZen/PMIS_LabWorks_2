@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Marvel">
+        <item>Черная Пантера|black-panther.jpg|black_panter.html</item>
+        <item>Капитан Марвел|capm.jpg|cap_marvel.html</item>
+        <item>Железный человек|iron-man2.jpg|iron_man_2.html</item>
+        <item>Тор 3|tor3.jpg|tor_3.html</item>
+        <item>Тор 4|tor4.jpg|tor_4.html</item>
+    </string-array>
+    <string-array name="DC">
+        <item>Бетмен|batmen.jpg|betman.html</item>
+        <item>Темный Pыцарь|betmen2.jpg|betman_2.html</item>
+        <item>Шазам 2|shzam2.jpg|shazam_2.html</item>
+        <item>Лига Cправедливости|justleg.jpg|lig.html</item>
+    </string-array>
+    <string-array name="Comedy">
+        <item>1+1|1+1.jpg|1+1.html</item>
+        <item>Главный герой|free-guy.jpg|free_guy.html</item>
+        <item>Телохранитель на фрилансе|a_freelance.jpg|freelance.html</item>
+        <item>Полтора шпиона|shpion.jpg|shpion.html</item>
+    </string-array>
+    <string-array name="Adventure">
+        <item>Круиз по джунглям|jungle.jpg|jungle.html</item>
+        <item>Гладиатор|a_gladiator.jpg|gladiator.html</item>
+    </string-array>
+    <string-array name="Fantastic">
+        <item>Фантастические твари|f_1.jpg|f_tvari.html</item>
+        <item>Фантастические твари 2|f_2.jpg|f_tvari_2.html</item>
+        <item>Гарри Поттер и философский камень|f_3.jpg|potter.html</item>
+    </string-array>
+    <string-array name="Horror">
+        <item>Заклятие|h_1.jpg|zakliatie.html</item>
+        <item>Не дыши|h_2.jpg|dont_breath.html</item>
+    </string-array>
+    <string-array name="Fiction">
+        <item>Трон|fic_1.jpg|tron.html</item>
+        <item>Я Робот|fic_2.jpg|robot.html</item>
+        <item>Интерстеллар|fic_3.jpg|interstellar.html</item>
+    </string-array>
+</resources>

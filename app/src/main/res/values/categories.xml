@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="drawer_list">
+        <item>Marvel</item>
+        <item>DC</item>
+        <item>Comedy</item>
+        <item>Adventure</item>
+        <item>Fantastic</item>
+        <item>Horror</item>
+        <item>Fiction</item>
+    </string-array>
+</resources>
