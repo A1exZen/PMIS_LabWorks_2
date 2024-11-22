@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+//    alias(libs.plugins.devtoolsKsp)
+    id("kotlin-kapt") // Подключаем плагин kapt
+    id("com.google.dagger.hilt.android") // Подключаем плагин Hilt
 }
 
 android {
@@ -50,6 +53,8 @@ android {
 }
 
 dependencies {
+    implementation(libs.constraintlayout.compose)
+
     implementation(libs.navigation.compose)
     implementation(libs.compose.animation)
     implementation(libs.accompanist.navigation.animation)
@@ -78,4 +83,12 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
+    kapt(libs.hilt.compiler)
+
+    implementation(libs.androidx.room.ktx)
+    kapt(libs.androidx.room.compiler)
+
 }

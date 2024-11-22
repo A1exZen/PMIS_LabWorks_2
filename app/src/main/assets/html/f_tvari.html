@@ -9,9 +9,9 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
+            background-color: #121212; /* Темный фон */
+            color: #e0e0e0; /* Светлый текст */
+            overflow-x: hidden;
         }
 
         .container {
@@ -19,19 +19,18 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 10px;
-            box-sizing: border-box; /* Чтобы паддинги не выходили за пределы */
+            box-sizing: border-box;
         }
 
         .movie-card {
             display: flex;
             flex-direction: row;
-            background-color: #fff;
+            background-color: #1e1e1e; /* Темный цвет для карточки */
             border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Более заметная тень */
             overflow: hidden;
             margin: 20px 0;
-            flex-wrap: wrap; /* Добавлено для мобильной адаптивности */
-            box-sizing: border-box; /* Чтобы паддинги не выходили за пределы */
+            flex-wrap: wrap;
         }
 
         .movie-image {
@@ -47,32 +46,32 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-sizing: border-box; /* Чтобы паддинги не выходили за пределы */
+            box-sizing: border-box;
         }
 
         .movie-title {
             font-size: 2rem;
             font-weight: bold;
-            color: #2c3e50;
+            color: #f5f5f5; /* Более яркий цвет для заголовка */
             margin: 0;
         }
 
         .movie-year {
             font-size: 1.2rem;
-            color: #95a5a6;
+            color: #a0a0a0; /* Текст года */
             margin: 10px 0;
         }
 
         .movie-description {
             font-size: 1rem;
-            color: #7f8c8d;
+            color: #cfcfcf; /* Светлый текст описания */
             line-height: 1.6;
             margin-bottom: 20px;
         }
 
         .movie-info {
             font-size: 1rem;
-            color: #34495e;
+            color: #b0b0b0; /* Цвет текста информации */
         }
 
         .movie-info p {
@@ -80,7 +79,7 @@
         }
 
         .button {
-            background-color: #3498db;
+            background-color: #3498db; /* Цвет кнопки */
             color: white;
             border: none;
             padding: 10px 20px;
@@ -90,14 +89,14 @@
             text-align: center;
             margin-top: 20px;
             width: fit-content;
+            transition: background-color 0.3s ease;
         }
 
         .button:hover {
-            background-color: #2980b9;
+            background-color: #2980b9; /* Темнее при наведении */
         }
 
         @media (max-width: 768px) {
-            /* Мобильная версия: делаем карточку вертикальной */
             .movie-card {
                 flex-direction: column;
             }
@@ -105,7 +104,7 @@
             .movie-image {
                 width: 100%;
                 height: auto;
-                border-radius: 12px 12px 0 0; /* Улучшение границ */
+                border-radius: 12px 12px 0 0;
             }
 
             .movie-details {
@@ -113,7 +112,7 @@
             }
 
             .movie-title {
-                font-size: 1.5rem; /* Уменьшаем размер шрифта для мобильных устройств */
+                font-size: 1.5rem;
             }
 
             .movie-year {
@@ -121,7 +120,7 @@
             }
 
             .movie-description {
-                font-size: 0.9rem; /* Уменьшаем размер шрифта для описания */
+                font-size: 0.9rem;
             }
 
             .movie-info {
@@ -129,8 +128,8 @@
             }
 
             .button {
-                width: 100%; /* Кнопка на всю ширину на мобильных устройствах */
-                padding: 15px; /* Увеличиваем область кнопки для удобства на мобильных */
+                width: 100%;
+                padding: 15px;
             }
         }
     </style>
@@ -151,7 +150,7 @@
                 <p><strong>Длительность:</strong> 133 мин</p>
                 <p><strong>Рейтинг:</strong> 7.3/10</p>
             </div>
-            <button class="button" onclick="window.location.href='f_tvari.html'">Смотреть Трейлер</button>
+            <button class="button" onclick="window.open('https://www.youtube.com/watch?v=TwvJe2VwhTU', '_blank')">Смотреть Трейлер</button>
         </div>
     </div>
 </div>

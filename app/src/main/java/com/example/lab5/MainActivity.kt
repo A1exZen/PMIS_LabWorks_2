@@ -44,7 +44,9 @@ import com.example.lab5.utils.ItemSaver
 import com.example.lab5.utils.ListItem
 //import com.example.lab5.utils.NavRoutes
 import com.example.lab5.utils.Routes
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter", "RememberReturnType")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,16 +54,28 @@ class MainActivity : ComponentActivity() {
         setContent {
             val navController = rememberNavController()
             val item = rememberSaveable(stateSaver = ItemSaver) {
-                mutableStateOf(ListItem("", "",""))}
-
+                mutableStateOf(
+                    ListItem(
+                        id = 0, title = "", imageName = "",
+                        htmlName = "", isfav = false, category = ""
+                    )
+                )
+            }
             AppTheme() {
                 NavHost(
                     navController = navController,
                     startDestination = Routes.MAIN_SCREEN.route
                 ) {
                     composable(Routes.MAIN_SCREEN.route) {
-                        Films(context = this@MainActivity) { listItem ->
-                            item.value=ListItem(listItem.title,listItem.imageName,listItem.htmlName)
+                        Films() { listItem ->
+                            item.value = ListItem(
+                                listItem.id,
+                                listItem.title,
+                                listItem.imageName,
+                                listItem.htmlName,
+                                listItem.isfav,
+                                listItem.category
+                            )
                             navController.navigate(Routes.INFO_SCREEN.route)
                         }
                     }

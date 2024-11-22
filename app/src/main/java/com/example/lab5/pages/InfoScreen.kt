@@ -1,5 +1,6 @@
 package com.example.lab5.pages
 
+import android.annotation.SuppressLint
 import android.graphics.Bitmap
 import android.view.ViewGroup
 import android.webkit.WebView
@@ -50,6 +51,7 @@ fun InfoScreen(item: ListItem) {
     }
 }
 
+@SuppressLint("SetJavaScriptEnabled")
 @Composable
 fun HtmlLoader(htmlName: String) {
     var backEnabled by remember { mutableStateOf(false) }
@@ -67,8 +69,7 @@ fun HtmlLoader(htmlName: String) {
     // Встраиваем WebView
     AndroidView(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(5.dp),
+            .fillMaxSize(),
         factory = { context ->
             WebView(context).apply {
                 layoutParams = ViewGroup.LayoutParams(
