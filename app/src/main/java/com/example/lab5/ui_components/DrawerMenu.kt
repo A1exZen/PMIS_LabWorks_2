@@ -68,7 +68,7 @@ fun DrawerMenu(
             fontWeight = FontWeight.Bold,
             fontSize = 24.sp,
             textAlign = TextAlign.Center,
-            color = colorResource(R.color.purple_200)
+            color = colorResource(R.color.purple_500)
         )
         Divider(
             modifier = Modifier
@@ -96,7 +96,7 @@ fun DrawerMenu(
                 ) {
                     Text(
                         text = category,
-                        color = Color.White,
+                        color = MaterialTheme.colorScheme.onSurface,
                         fontWeight = FontWeight.Bold,
                         fontSize = 18.sp,
                         modifier = Modifier.padding(16.dp).clickable {

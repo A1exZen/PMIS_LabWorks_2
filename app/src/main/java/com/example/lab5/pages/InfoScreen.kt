@@ -7,10 +7,12 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -36,18 +38,13 @@ fun InfoScreen(item: ListItem) {
         shape = RoundedCornerShape(16.dp),
         elevation = CardDefaults.cardElevation(8.dp)
     ) {
-        Column(
-            modifier = Modifier.fillMaxSize()
-        ) {
-//            AssetImage(
-//                imageName = item.imageName,
-//                contentDescription = item.title,
-//                modifier = Modifier
-//                    .fillMaxWidth()
-//                    .height(250.dp)
-//            )
-            HtmlLoader(htmlName = item.htmlName)
-        }
+//        AssetImage(
+//            imageName = item.imageName,
+//            contentDescription = item.title,
+//            modifier = Modifier
+//                .fillMaxWidth()
+//        )
+        HtmlLoader(htmlName = item.htmlName)
     }
 }
 
